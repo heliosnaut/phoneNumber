@@ -1,10 +1,8 @@
-# node phone query 
+# node phone query
 
 手机归属地查询node版本
 
-
-数据来源：<https://github.com/lovedboy/phone>
-
+数据来源：[https://github.com/lovedboy/phone](https://github.com/lovedboy/phone)
 
 用法：
 
@@ -24,3 +22,6 @@
 
     */
 ```
+
+
+知道开头三位手机号，了解本地所属城市，能够查询到具体具体36 * 100个可能
