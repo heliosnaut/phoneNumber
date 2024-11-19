@@ -27,4 +27,4 @@
 
 执行2CSV生成csv文件
 
-使用https://xlsx2vcf.kefuxx.com/将xlsx文件转为vcf文件，然后导入到手机联系人
+使用 [xlsx和vcf相互转换](https://xlsx2vcf.kefuxx.com/) 将xlsx文件转为vcf文件，然后导入到手机联系人

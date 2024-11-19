@@ -1,24 +1,26 @@
 const fs = require('fs');
-const fileWriter = fs.createWriteStream('./number.txt');
 const find = require('./index.js');
 
 const cityName = '齐齐哈尔'
-const headNum = 132
+const headNum = `132`
+const endNum = `0000`
+const mid = []
 
 for (let i = 0; i < 9999; i++) {
   let httpArg;
+  let temp;
   if (i >= 1000) {
-    httpArg = `${headNum}${i}0077`;
+    temp = String(i)
   } else if (i >= 100) {
-    httpArg = `${headNum}0${i}0077`;
+    temp = `0${i}`
   } else if (i >= 10) {
-    httpArg = `${headNum}00${i}0077`;
+    temp = `00${i}`
   } else {
-    httpArg = `${headNum}000${i}0077`;
+    temp = `000${i}`
   }
-
+  httpArg = `${headNum}${temp}${endNum}`
   jsonResult = JSON.stringify(find(Number(httpArg)))
-  if (jsonResult && jsonResult.includes(cityName)) fileWriter.write(`${httpArg}\n`);
+  if (jsonResult && jsonResult.includes(cityName)) mid.push(temp)
 }
 
-fileWriter.end(() => console.log('File writing completed.'));
+fs.writeFileSync('./mid.json', JSON.stringify(mid))
